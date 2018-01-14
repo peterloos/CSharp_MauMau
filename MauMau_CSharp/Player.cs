@@ -194,6 +194,11 @@ class Player
         this.PrintMauMauIf();
     }
 
+    public void ReleaseAllCards()
+    {
+        this.hand.Clear();
+    }
+
     // private helper methods
     private Card DrawCard()
     {

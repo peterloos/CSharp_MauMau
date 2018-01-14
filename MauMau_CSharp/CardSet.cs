@@ -46,6 +46,11 @@ class CardSet
         this.set.RemoveAt(index);
     }
 
+    public void Clear()
+    {
+        this.set.Clear();
+    }
+
     // overrides
     public override String ToString()
     {

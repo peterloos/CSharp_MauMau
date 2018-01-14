@@ -132,9 +132,9 @@ class Program
         // TestUnit_02_CardDeck();
         // TestUnit_03_CardDeck();
         // TestUnit_04_CardSet();
-        // TestUnit_10_PlayTheGame();
+        TestUnit_10_PlayTheGame();
         // TestUnit_11_SingleTestMauMaster();
-        TestUnit_12_StressTestMauMaster();
+        // TestUnit_12_StressTestMauMaster();
     }
 }
 

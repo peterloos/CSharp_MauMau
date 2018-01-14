@@ -1,4 +1,4 @@
-﻿// #define VERBOSE
+﻿#define VERBOSE
 // #define SINGLE_STEP
 
 using System;
@@ -54,6 +54,7 @@ class MauMaster
         for (int i = 0; i < this.players.Length; i++)
         {
             this.players[i].IsPlaying = true;
+            this.players[i].ReleaseAllCards();
             this.players[i].DrawCards(MaxCardsAtBegin);  // draw initial amount of cards
         }
 

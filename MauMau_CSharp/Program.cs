@@ -74,7 +74,7 @@ class Program
         Console.WriteLine("Karten auf der Hand: {0}", set);
     }
 
-    private static void TestUnit_09_PlayTheGame()
+    private static void TestUnit_10_PlayTheGame()
     {
         MauMaster.PrintVersion();
         String[] names = MauMaster.ReadPlayers();
@@ -83,7 +83,16 @@ class Program
         mm.Play();
     }
 
-    private static void TestUnit_10_StressTestMauMaster()
+    private static void TestUnit_11_SingleTestMauMaster()
+    {
+        MauMaster.PrintVersion();
+        MauMaster mm = new MauMaster(new String[] { "Hans", "Sepp", "Ulli" });
+        int randomSeed = 188;
+        mm.Init(randomSeed);
+        mm.Play();
+    }
+
+    private static void TestUnit_12_StressTestMauMaster()
     {
         MauMaster.PrintVersion();
         MauMaster mm = new MauMaster(new String[] { "Hans", "Sepp", "Ulli" });
@@ -117,24 +126,15 @@ class Program
         Console.WriteLine("Maximum number of rounds: {0} [Index {1}]", maxRounds, maxRoundsIndex);
     }
 
-    private static void TestUnit_11_SingleTestMauMaster()
-    {
-        MauMaster.PrintVersion();
-        MauMaster mm = new MauMaster(new String[] { "Hans", "Sepp", "Ulli" });
-        int randomSeed = 188;
-        mm.Init(randomSeed);
-        mm.Play();
-    }
-
     public static void Main()
     {
         // TestUnit_01_Cards();
         // TestUnit_02_CardDeck();
         // TestUnit_03_CardDeck();
         // TestUnit_04_CardSet();
-        // TestUnit_09_PlayTheGame();
-        // TestUnit_10_StressTestMauMaster();
-        TestUnit_11_SingleTestMauMaster();
+        // TestUnit_10_PlayTheGame();
+        // TestUnit_11_SingleTestMauMaster();
+        TestUnit_12_StressTestMauMaster();
     }
 }
 

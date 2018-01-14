@@ -1,4 +1,4 @@
-﻿#define VERBOSE
+﻿// #define VERBOSE
 // #define SINGLE_STEP
 
 using System;
@@ -47,6 +47,7 @@ class MauMaster
 
         // intialize card decks
         this.playing.Clear();
+        this.drawing.Clear();
         this.drawing.Fill();       // fill deck with all available cards ...
         this.drawing.Shuffle();    // ... and mix them ...
 
